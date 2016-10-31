@@ -35,15 +35,15 @@
 /*    Типовые элементы    */
 
 a, body, div, form, input, p, table {
-    font-family: 'OpenSans';
+    font-family: 'OpenSans-Light';
     font-size: 100%;
     color: black;
 }
 
 html, body {
-    background-color: #FFD82B;
+    background-color: #FFE260;
     height: 100%;
-    width: 100%;
+    width: auto;
     font-size: 100%;
 }
 
@@ -88,15 +88,15 @@ h3 {
     transition: border-color 0.5s ease;
 }
 
-.textplace::-webkit-input-placeholder    {
-    text-indent: 10px;
-    transition: text-indent 0.6s ease;
-}
+.textplace::-webkit-input-placeholder    {text-indent: 10px; transition: text-indent 0.6s ease;}
+.textplace::-moz-placeholder             {text-indent: 10px; transition: text-indent 0.6s ease;}/* Firefox 19+ */
+.textplace:-moz-placeholder              {text-indent: 10px; transition: text-indent 0.6s ease;}/* Firefox 18- */
+.textplace:-ms-input-placeholder         {text-indent: 10px; transition: text-indent 0.6s ease;}
 
-.textplace:focus::-webkit-input-placeholder    {
-    text-indent: 500px;
-    transition: text-indent 0.9s ease;
-}
+.textplace:focus::-webkit-input-placeholder    {text-indent: 500px; transition: text-indent 0.9s ease;}
+.textplace:focus::-moz-placeholder             {text-indent: 500px; transition: text-indent 0.9s ease;}/* Firefox 19+ */
+.textplace:focus:-moz-placeholder              {text-indent: 500px; transition: text-indent 0.9s ease;}/* Firefox 18- */
+.textplace:focus:-ms-input-placeholder         {text-indent: 500px; transition: text-indent 0.9s ease;}
 
 /* END */
 
@@ -121,6 +121,7 @@ h3 {
 .submit-button:hover {
     background-color: #FFFFFF;
     color: #3366CC;
+    cursor: pointer;
     transition: background-color 0.15s linear;
 }
 
@@ -133,12 +134,13 @@ h3 {
 /* STATIC_BAR */
 
 .static-bar {
-    height: 4em;
     width: 100%;
+    height: 4em;
     background-color: #3366CC;
     position: fixed;
     top: 0;
     z-index: 5;
+    color: white;
 }
 
 .static-bar-logo {
@@ -159,7 +161,7 @@ h3 {
     font-family: OpenSans-ExtraBold;
     font-size: 29pt;
     text-indent: 10px;
-    color: white;
+    color: inherit;
     margin-top: 0.14em;
     text-decoration: none;
     float: left;
@@ -170,20 +172,43 @@ h3 {
     height: auto;
     display: inline-block;
     font-size: 150%;
+    color: inherit;
     float: left;
     margin: 0.65em 1em;
 }
 
 .static-bar-horizontal-menu > a {
-    color: white;
-    font-family: OpenSans-Light;
+    color: inherit;
     text-decoration: none;
     margin-left: 1em;
-
 }
 
 .static-bar-horizontal-menu > a:hover {
     border-bottom: 0.3em solid white;
+}
+
+.static-bar-contact-numbers {
+    width: auto;
+    height: auto;
+    display: inline;
+    float: left;
+    color: inherit;
+    text-align: center;
+    margin-left: 1em;
+}
+.static-bar-contact-numbers > a {
+    font-size: 150%;
+    color: #FFD82B;
+}
+
+.static-bar-word-or {
+    width: auto;
+    height: auto;
+    display: inline;
+    float: left;
+    color: inherit;
+    margin-top: 1.4em;
+    margin-left: 1.5em;
 }
 
 #staticbar-call-button {
@@ -191,37 +216,42 @@ h3 {
     height: auto;
     display: inline-block;
     float: left;
-    margin: 0.7em;
+    margin-top: 0.7em;
+    margin-left: 1.5em;
 
 }
 
 
 /*  END  */
 
+/* STATIC_BAR */
 
-#header {
+.header {
+    width: 100%;
+    height: 100%;
     background-image: url(../images/parallax_background_.jpg);
     background-size: cover;
     background-attachment: fixed;
-    width: 100%;
-    height: 100%;
     padding-top: 4em;
     color: white;
 }
 
-#offer {
-    background-color: #3366CC;
-    float: none;
-    margin-top: 14em;
+.header-offer {
     width: 100%;
     height: 15.8em;
+    background-color: #3366CC;
+    float: left;
+    margin-top: 14em;
     display: block;
 }
 
-#vertical-form {
-    display: inline-block;
+.header-offer-form {
     width: auto;
     height: auto;
+    display: inline-block;
+    padding-left: 0.6em;
+    float: right;
+    margin-top: 0.5em;
 }
 @media screen and (max-width: 720px){
     #vertical-form {
@@ -229,7 +259,7 @@ h3 {
     }
 }
 
-#vertical-form h1, h3 {
+.header-offer-form h1, h3 {
     color: white;
     display: inline;
     padding-left: 10px;
