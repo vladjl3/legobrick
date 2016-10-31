@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-language" content="ru">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>ТЕСТ.</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- -->
+    <script type="text/javascript" src="../LEGOBRICK/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
+    <script type="text/javascript">
+        jQuery(function($){
+            $("#phone").mask("+7 (999) 999-9999");
+                            });
+</script>
+</head>
+
+<body>
+<div class="static-bar">
+    <a class="static-bar-logo" href=""></a>
+    <a class="static-bar-logoname" href="">LEGOBRICK</a>
+    <div class="static-bar-horizontal-menu">
+        <a href="">Главная</a>
+        <a href="">Продукция</a>
+        <a href="">Отзывы</a>
+        <a href="">Контакты</a>
+    </div>
+    <div class='contact-numbers'></div>
+    <button id="staticbar-call-button" class="submit-button">Сделать заявку</button>
+</div>
+<div id="header">
+    <div id="offer">купи и не пожалеешь!
+    <div id="vertical-form">
+        <form action="../php/tlgrm.php" method="POST">
+            <div class="form-text">
+               <h1>Заполните форму</h1><br /><h3>и наш менеджер вам перезвонит</h3>
+            </div>
+            <div class="form-inputs">
+                <input class="textplace" type='text' name='name' placeholder="ИМЯ" size='30' /><br />
+                <input class="textplace" id="phone" type='text' name='phone' placeholder="ТЕЛЕФОН" size='30' /><br />
+                <input class="submit-button" type="submit" name="button" value=" ЗАКАЗАТЬ БЕСПЛАТНЫЙ ЗВОНОК! " />
+            </div>
+        </form>
+    </div>
+    </div>
+</div>
+<div id="advantages"><p>Hello, world!</p></div>
+<div id="sale"> fdfdf</div>
+<div id="work"></div>
+<div id="horizontal_form"></div>
+<div id="footer"></div>
+
+</body>
+
+</html>
