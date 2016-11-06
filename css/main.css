@@ -41,8 +41,8 @@ a, body, div, form, input, p, table {
 }
 
 html, body {
-    background-color: #FFE260;
-    height: 100%;
+    background-color: #FFA560;
+    height: auto;
     width: auto;
     font-size: 100%;
 }
@@ -68,14 +68,14 @@ h3 {
 /*   ПОЛЕ ДЛЯ ВВОДА <input type="text">   */
 
 .textplace {
+    width: 100%;
+    height: auto;
     border: 2px solid;
     border-color: white;
     border-radius: 8px;
     line-height: 40px;
-    margin: 0.5em;
-    text-indent: 10px;
     transition: border-color 0.5s ease;
-    width: 21em;
+    box-sizing: border-box;
 }
 
 .textplace:hover {
@@ -104,7 +104,7 @@ h3 {
 /*   КНОПКА ДЛЯ ВВОДА <input type="submit">   */
 
 .submit-button {
-    width: auto;
+    width: 100%;
     height: auto;
     background-color: #3366CC;
     border: 0.1em solid;
@@ -113,10 +113,9 @@ h3 {
     color: #FFFFFF;
     letter-spacing: 0.05em;
     line-height: 40px;
-    padding-right: 10px;
-    padding-left: 10px;
     text-align: center;
     transition: background-color 0.15s linear;
+    box-sizing: border-box;
 }
 .submit-button:hover {
     background-color: #FFFFFF;
@@ -128,7 +127,9 @@ h3 {
 /*  END  */
 
 
+
 /* КЛАССЫ УНИКАЛЬНЫХ БЛОКОВ */
+
 
 
 /* STATIC_BAR */
@@ -218,53 +219,121 @@ h3 {
     float: left;
     margin-top: 0.7em;
     margin-left: 1.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 
 }
 
-
 /*  END  */
 
-/* STATIC_BAR */
+
+
+/* HEADER */
 
 .header {
     width: 100%;
     height: 100%;
-    background-image: url(../images/parallax_background_.jpg);
+    background-image: url(../images/fixed_background.jpg);
     background-size: cover;
     background-attachment: fixed;
     padding-top: 4em;
     color: white;
+    box-sizing: border-box;
 }
 
 .header-offer {
     width: 100%;
-    height: 15.8em;
+    height: 17.8em;
     background-color: #3366CC;
+    color: inherit;
     float: left;
     margin-top: 14em;
-    display: block;
+    display: inline-block;
 }
 
 .header-offer-form {
-    width: auto;
-    height: auto;
+    width: 22em;
+    height: 100%;
+    color: inherit;
     display: inline-block;
-    padding-left: 0.6em;
     float: right;
-    margin-top: 0.5em;
-}
-@media screen and (max-width: 720px){
-    #vertical-form {
-        display:none;
-    }
+    margin-top: 1.6em;
+    margin-right: 11em;
+    box-sizing: border-box;
 }
 
-.header-offer-form h1, h3 {
+.header-offer-form-text {
+    color: inherit;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+#header-offer-form-input {
+    margin-bottom: 0.5em;
+}
+
+#header-offer-form-input-phone {
+    margin-bottom: 0.5em;
+}
+
+/*  END  */
+
+
+/* ADVANTAGES */
+
+.advantages {
+    width: 100%;
+    height: 100%;
+    background-color: black;
     color: white;
-    display: inline;
-    padding-left: 10px;
 }
 
-#advantages {
-    height: 1000px;
+.advantages-header {
+    width: 13em;
+    height: auto;
+    background-color: #3366CC;
+    border-radius: 2em;
+    font-size: 2rem;
+    color: inherit;
+    display: block;
+
 }
+
+.advantages-block {
+    width: 50%;
+    height: auto;
+    background-color: white;
+    border-radius: 3em;
+    box-sizing: border-box;
+}
+
+#top-left {
+    display: inline-block;
+    float: left;
+}
+
+#top-right {
+    display: inline-block;
+    float: left;
+}
+
+#bottom-left {
+    display: inline-block;
+    clear: both;
+    float: left;
+}
+
+#bottom-right {
+    display: inline-block;
+    float: left;
+}
+
+/* SALE */
+
+.sale {
+    width: 100%;
+    height: auto;
+    background-color: bisque;
+
+
+/*   УНИКАЛЬНЫЕ ИДЕНТИФИКАТОРЫ   */
