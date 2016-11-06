@@ -42,9 +42,8 @@ a, body, div, form, input, p, table {
 
 html, body {
     background-color: #FFA560;
-    height: auto;
-    width: auto;
-    font-size: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 h1 {
@@ -72,7 +71,6 @@ h3 {
     height: auto;
     border: 2px solid;
     border-color: white;
-    border-radius: 8px;
     line-height: 40px;
     transition: border-color 0.5s ease;
     box-sizing: border-box;
@@ -109,9 +107,8 @@ h3 {
     background-color: #3366CC;
     border: 0.1em solid;
     border-color: white;
-    border-radius: 2em;
     color: #FFFFFF;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     line-height: 40px;
     text-align: center;
     transition: background-color 0.15s linear;
@@ -241,31 +238,58 @@ h3 {
     box-sizing: border-box;
 }
 
-.header-offer {
+.header-offer-background {
     width: 100%;
     height: 17.8em;
     background-color: #3366CC;
     color: inherit;
-    float: left;
+    float: none;
     margin-top: 14em;
+    display: block;
+}
+
+.header-offer-text {
+    width: 30em;
+    height: 100%;
+    float: left;
+    margin-left: 5em;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.header-offer-text li {
+    font-family: 'OpenSans-ExtraBold';
+    font-size: 230%;
+    text-indent: 0.2em;
+    line-height: 2.6em;
+}
+
+.header-offer-text li::before {
+    content: '';
     display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-image: url(../images/li-image.png);
+    background-size: cover;
+    float: left;
+    margin-top: 0.8em;
+
 }
 
 .header-offer-form {
     width: 22em;
     height: 100%;
     color: inherit;
-    display: inline-block;
+    display: block;
     float: right;
-    margin-top: 1.6em;
-    margin-right: 11em;
+    margin-right: 5em;
+    padding-top: 2em;
     box-sizing: border-box;
 }
 
 .header-offer-form-text {
     color: inherit;
     display: block;
-    margin-bottom: 0.5em;
 }
 
 #header-offer-form-input {
@@ -284,26 +308,28 @@ h3 {
 .advantages {
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: #FFD82B;
     color: white;
 }
 
 .advantages-header {
-    width: 13em;
+    width: 10em;
     height: auto;
     background-color: #3366CC;
-    border-radius: 2em;
     font-size: 2rem;
     color: inherit;
     display: block;
+    text-align: center;
+    margin-left: 37%;
+    margin-bottom: 1em;
 
 }
 
 .advantages-block {
-    width: 50%;
+    width: 48%;
     height: auto;
     background-color: white;
-    border-radius: 3em;
+    margin: 1%;
     box-sizing: border-box;
 }
 
