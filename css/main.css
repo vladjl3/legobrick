@@ -310,6 +310,7 @@ h3 {
     height: 100%;
     background-color: #FFD82B;
     color: white;
+    overflow-x: hidden;
 }
 
 .advantages-header {
